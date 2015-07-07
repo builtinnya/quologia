@@ -1,0 +1,12 @@
+<% if flash[:notice] %>
+  <script>
+   var ready = function() {
+     k$.status({
+       text: '<%= flash[:notice] %>',
+       type: 'status-green'
+     });
+   };
+   $(document).ready(ready);
+   $(document).on('page:load', ready);
+  </script>
+<% end %>

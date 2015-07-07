@@ -2,7 +2,17 @@
   <nav>
     <ul>
       <li class="navbar-title">
-        <%= link_to 'Quologia', root_path %>
+        <h1><%= link_to 'Quologia', root_path %></h1>
+        <button role="button">=</button>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <% if logged_in? %>
+          <%= link_to 'ログアウト', logout_path %>
+        <% else %>
+          <%= link_to 'Twitterでログイン', '/auth/twitter' %>
+        <% end %>
       </li>
     </ul>
   </nav>
