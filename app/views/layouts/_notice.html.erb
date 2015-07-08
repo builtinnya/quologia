@@ -1,12 +1,15 @@
-<% if flash[:notice] %>
-  <script>
+<%= javascript_tag do %>
+ (function() {
    var ready = function() {
-     k$.status({
-       text: '<%= flash[:notice] %>',
-       type: 'status-green'
-     });
+     var notice = <%= raw flash[:notice].to_json %>;
+     var alert = <%= raw flash[:alert].to_json %>;
+
+     if (notice) {
+       k$.status({ text: notice, type: 'status-blue' });
+     } else if (alert) {
+       k$.status({ text: alert, type: 'status-red' });
+     }
    };
-   $(document).ready(ready);
-   $(document).on('page:load', ready);
-  </script>
+   $(document).on('ready page:load', ready);
+ })();
 <% end %>

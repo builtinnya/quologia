@@ -1,4 +1,4 @@
-<header class="navbar">
+<div class="navbar" data-ks-navbar>
   <nav>
     <ul>
       <li class="navbar-title">
@@ -7,13 +7,21 @@
       </li>
     </ul>
     <ul>
-      <li>
-        <% if logged_in? %>
+      <% if logged_in? %>
+        <li>
           <%= link_to 'ログアウト', logout_path %>
-        <% else %>
-          <%= link_to 'Twitterでログイン', '/auth/twitter' %>
-        <% end %>
-      </li>
+        </li>
+      <% else %>
+        <li><%= fa_icon_spaced 'sign-in', text: 'ログイン' %>
+          <ul>
+            <li>
+              <%= link_to('/auth/twitter') do %>
+                <%= fa_icon_spaced 'twitter-square lg', text: 'Twitter' %>
+              <% end %>
+            </li>
+          </ul>
+        </li>
+      <% end %>
     </ul>
   </nav>
-</header>
+</div>

@@ -13,5 +13,6 @@
  */
 
 @import 'kickstart_rails';
+@import 'font-awesome.css'; /* See: https://github.com/bokmann/font-awesome-rails/issues/130 */
 @import 'header';
 @import 'welcome';

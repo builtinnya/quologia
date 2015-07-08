@@ -31,6 +31,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'omniauth', '~> 1.2.2'
 gem 'omniauth-twitter', '~> 1.2.0'
 
+# Use Font Awesome for awesome icons
+gem 'font-awesome-rails', '~> 4.3.0.0'
+
+# For passing Rails data to js
+# gem 'gon', '~> 5.2.3'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
