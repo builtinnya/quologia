@@ -1,3 +1,24 @@
 .navbar {
   @include navbar($collapse: true);
 }
+
+.user-header-menu-top-icon {
+  width: 20px;
+  height: 20px;
+  margin: 2px 0;
+  border: 0;
+}
+
+.user-header-menu-top-text {
+  display: inline-block;
+  max-width: 175px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+  white-space: nowrap;
+  padding-left: 5px;
+}
+
+.navbar nav > ul > li.menu-item:after {
+  vertical-align: top;
+}
