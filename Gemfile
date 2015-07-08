@@ -30,6 +30,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # For OAuth authentication
 gem 'omniauth', '~> 1.2.2'
 gem 'omniauth-twitter', '~> 1.2.0'
+gem 'omniauth-facebook', '~> 2.0.1'
 
 # Use Font Awesome for awesome icons
 gem 'font-awesome-rails', '~> 4.3.0.0'
