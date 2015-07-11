@@ -2,12 +2,22 @@
   <nav>
     <ul>
       <li class="navbar-title">
-        <h1><%= link_to 'Quologia', root_path %></h1>
+        <%= link_to 'Quologia', root_path %>
         <button role="button">=</button>
       </li>
     </ul>
     <ul>
       <% if logged_in? %>
+        <li>
+          <%= link_to(new_author_path) do %>
+            <%= fa_icon_spaced 'plus-square', text: '名言' %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to(new_author_path) do %>
+            <%= fa_icon_spaced 'plus-square', text: '著者' %>
+          <% end %>
+        </li>
         <li>
           <%= image_tag current_user.image_url, class: 'user-header-menu-top-icon' %>
           <span class="user-header-menu-top-text"><%= current_user.name %></span>

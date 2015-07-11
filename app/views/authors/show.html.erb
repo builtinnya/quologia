@@ -1,0 +1,27 @@
+<header class="page-heading">
+  <h3>著者詳細</h3>
+</header>
+
+<div class="row">
+  <div class="author-image">
+    <% if @author.author_image? %>
+      <%= image_tag @author.author_image.url %>
+    <% else %>
+      <%= fa_icon 'user', class: 'default-author-image' %>
+    <% end %>
+  </div>
+  <div class="author-profile">
+    <div class="author-name">
+      <div class="label">
+        <%= t('activerecord.attributes.author.name') %>
+      </div>
+      <div class="value">
+        <%= @author.name %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="author-description">
+  <%= @author.description %>
+</div>

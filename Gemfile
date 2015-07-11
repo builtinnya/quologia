@@ -9,7 +9,7 @@ gem 'sqlite3'
 # gem 'sass-rails', '~> 5.0'
 # Use Kickstart as UI library
 gem 'sass', '~> 3.4' # Required for Kickstart
-gem 'kickstart_rails', '~> 3'
+gem 'kickstart_rails', '3.0.100'
 gem 'autoprefixer-rails' # Required for Kickstart
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -34,6 +34,10 @@ gem 'omniauth-facebook', '~> 2.0.1'
 
 # Use Font Awesome for awesome icons
 gem 'font-awesome-rails', '~> 4.3.0.0'
+
+# Use CarrierWave for file upload
+gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~> 3.7.0'
 
 # For passing Rails data to js
 # gem 'gon', '~> 5.2.3'

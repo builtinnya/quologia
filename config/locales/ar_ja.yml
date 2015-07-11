@@ -1,0 +1,12 @@
+ja:
+  activerecord:
+    models:
+      author: 著者
+    attributes:
+      author:
+        name: 名前
+        birthplace: 出身地
+        birthday: 生年月日
+        deathday: 没年月日
+        description: 説明
+        author_image: 著者画像

@@ -1,12 +1,20 @@
 .navbar {
-  @include navbar($collapse: true);
+  @include navbar($layout: 'fluid', $collapse: true);
+
+  nav {
+    max-width: $tablet;
+  }
+}
+
+.create {
+  @include button(map-get($colors, green))
 }
 
 .user-header-menu-top-icon {
   width: 20px;
   height: 20px;
-  margin: 2px 0;
   border: 0;
+  vertical-align: text-top;
 }
 
 .user-header-menu-top-text {
