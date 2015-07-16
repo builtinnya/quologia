@@ -34,3 +34,11 @@ form {
 form textarea.error {
   border-color: map-get($colors, red);
 }
+
+.pagination {
+  @include pagination();
+
+  ul {
+    margin: 0 auto;
+  }
+}

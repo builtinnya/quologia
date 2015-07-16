@@ -87,6 +87,8 @@
       .quote-main-container {
         @include row();
 
+        padding-right: 15px;
+
         .quote-content {
           @include column(12);
 
@@ -118,6 +120,16 @@
               position: absolute;
               left: 0;
               top: 0;
+              color: #7a7a7a;
+            }
+
+            &:after {
+              display: block;
+              content: "\201D";
+              font-size: 3rem;
+              position: absolute;
+              right: 0;
+              bottom: 0;
               color: #7a7a7a;
             }
           }
