@@ -9,13 +9,8 @@
     <ul>
       <% if logged_in? %>
         <li>
-          <%= link_to(new_author_path) do %>
+          <%= link_to(new_quote_path) do %>
             <%= fa_icon_spaced 'plus-square', text: '名言' %>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to(new_author_path) do %>
-            <%= fa_icon_spaced 'plus-square', text: '著者' %>
           <% end %>
         </li>
         <li>

@@ -1,0 +1,36 @@
+.wrapper {
+  @include wrapper($fluid: true);
+  max-width: $tablet;
+}
+
+.page-heading {
+  @include page-heading();
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.alert {
+  @include alert();
+  background: map-get($colors, red);
+}
+
+@mixin clearfix() {
+  &:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+  }
+}
+
+form {
+  @include form();
+}
+
+.form-group {
+  @include form_group();
+}
+
+form textarea.error {
+  border-color: map-get($colors, red);
+}

@@ -1,12 +1,10 @@
 ja:
   activerecord:
     models:
-      author: 著者
+      quote: 名言
+
     attributes:
-      author:
-        name: 名前
-        birthplace: 出身地
-        birthday: 生年月日
-        deathday: 没年月日
-        description: 説明
+      quote:
+        author_name: 著者名
+        content: 内容
         author_image: 著者画像

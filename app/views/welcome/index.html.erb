@@ -1,3 +1,25 @@
 <header class="page-heading">
   <h3>名言集</h3>
 </header>
+
+<main class="quote-list">
+  <% @quotes.each do |quote| %>
+    <div class="quote-container">
+      <div class="quote-author-image">
+        <%= link_to(quote) do %>
+          <%= image_tag quote.author_image.url, class: 'user-author-image' %>
+        <% end %>
+      </div>
+      <div class="quote-main">
+        <div class="quote-main-container">
+          <div class="quote-content">
+            <blockquote>
+              <%= quote.content %>
+              <cite><%= quote.author_name %></cite>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</main>

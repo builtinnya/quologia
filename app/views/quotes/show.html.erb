@@ -1,0 +1,64 @@
+<header class="page-heading">
+  <h3>名言</h3>
+</header>
+
+<main class="show-quote">
+  <% if @quote.created_by?(current_user) %>
+    <div class="quote-buttons">
+      <%= link_to '編集する', edit_quote_path(@quote), class: 'quote-edit-button' %>
+      &nbsp;
+      <%= link_to '削除する', quote_path(@quote), class: 'quote-delete-button', method: :delete, data: { confirm: '本当に削除しますか？' } %>
+     </div>
+  <% end %>
+  <div class="quote-container">
+    <div class="quote-author-image">
+      <%= image_tag @quote.author_image.url, class: 'user-author-image' %>
+    </div>
+    <div class="quote-main">
+      <div class="quote-main-container">
+        <div class="quote-content">
+          <blockquote>
+            <%= @quote.content %>
+            <cite><%= @quote.author_name %></cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+  <table class="quote-meta-table">
+    <tbody>
+      <tr>
+        <td align="right">投稿日時</td>
+        <td><%= @quote.created_at %>
+      </tr>
+      <tr>
+        <td align="right">最終更新日時</td>
+        <td><%= @quote.updated_at %></td>
+      </tr>
+      <tr>
+        <td align="right">投稿者</td>
+        <td>
+          <% if @quote.poster and @quote.poster.image_url %>
+            <%= image_tag @quote.poster.image_url, class: 'poster-image' %>
+          <% end %>
+          <span class="poster-name-text"><%= @quote.poster.name %></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+   /* * * CONFIGURATION VARIABLES * * */
+   var disqus_shortname = 'quologia';
+   var disqus_identifier = '/quotes/' + '<%= @quote.id %>';
+
+   /* * * DON'T EDIT BELOW THIS LINE * * */
+   (function() {
+     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+   })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</main>

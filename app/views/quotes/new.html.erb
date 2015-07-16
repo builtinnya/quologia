@@ -1,0 +1,48 @@
+<% title "名言登録" %>
+
+<header class="page-heading">
+  <h3>名言登録</h3>
+</header>
+
+<main class="new-quote">
+  <%= form_for(@quote, role: 'form') do |f| %>
+    <% if @quote.errors.any? %>
+      <div class="alert">
+        <h1>エラー</h1>
+        <ul>
+          <% @quote.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="author-image">
+      <div class="author-image-display">
+        <% if @quote.author_image? %>
+          <%= image_tag @quote.author_image.url, class: 'user-author-image' %>
+        <% else %>
+          <%= fa_icon 'user', class: 'default-author-image' %>
+        <% end %>
+      </div>
+      <div>
+        <%= f.file_field :author_image %>
+        <%= f.hidden_field :author_image_cache %>
+      </div>
+    </div>
+
+    <div class="author-profile">
+      <div class="form-group author-name">
+        <%= f.text_field :author_name, size: 30, class: ('error' if @quote.errors[:author_name].any?), placeholder: t('activerecord.attributes.quote.author_name') %>
+      </div>
+    </div>
+
+    <div class="form-group quote-content">
+      <%= f.text_area :content, rows: 4, cols: 30, class: ('error' if @quote.errors[:content].any?), placeholder: t('activerecord.attributes.quote.content') %>
+    </div>
+
+    <div class="submit">
+      <%= f.submit '登録する', role: 'button', data: { disable_with: '登録中…' } %>
+    </div>
+  <% end %>
+</main>

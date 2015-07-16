@@ -1,4 +1,9 @@
 module ApplicationHelper
+  # Sets title
+  def title(page_title)
+    content_for(:title) { page_title }
+  end
+
   # Creates an icon tag given an icon name and possible icon modifiers.
   # A non-breaking space entity will be put between an icon and a text.
   #
