@@ -12,21 +12,7 @@
       <%= link_to '削除する', quote_path(@quote), class: 'quote-delete-button', method: :delete, data: { confirm: '本当に削除しますか？' } %>
      </div>
   <% end %>
-  <div class="quote-container">
-    <div class="quote-author-image">
-      <%= image_tag @quote.author_image.url, class: 'user-author-image' %>
-    </div>
-    <div class="quote-main">
-      <div class="quote-main-container">
-        <div class="quote-content">
-          <blockquote>
-            <%= @quote.content %>
-            <cite><%= @quote.author_name %></cite>
-          </blockquote>
-        </div>
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'quotes/quote', locals: { quote: @quote } %>
   <table class="quote-meta-table">
     <tbody>
       <tr>

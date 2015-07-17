@@ -1,0 +1,21 @@
+<div class="quote-container">
+  <div class="quote-author-image">
+    <%= link_to(quote) do %>
+      <%= image_tag quote.author_image.url, class: 'user-author-image' %>
+    <% end %>
+  </div>
+  <div class="quote-main">
+    <div class="quote-main-container">
+      <div class="quote-content">
+        <blockquote>
+          <%= quote.content %>
+          <cite>
+            <%= link_to root_path(q: { author_name_cont: quote.author_name }) do %>
+              <%= quote.author_name %>
+            <% end %>
+          </cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</div>
