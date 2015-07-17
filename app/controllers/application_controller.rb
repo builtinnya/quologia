@@ -5,8 +5,13 @@ class ApplicationController < ActionController::Base
 
   helper_method :logged_in?, :current_user
 
+  before_action :build_universal_search
+
   rescue_from Exception, with: :error500
   rescue_from ActiveRecord::RecordNotFound, ActionController::RoutingError, with: :error404
+
+  # The number of quotes shown in index per page
+  PER = 5
 
   private
 
@@ -31,5 +36,9 @@ class ApplicationController < ActionController::Base
   def error500(e)
     logger.error [e, *e.backtrace].join("\n")
     render 'error500', status: 500, formats: [:html]
+  end
+
+  def build_universal_search
+    @q = Quote.page(params[:page]).per(PER).includes(:poster).order(updated_at: :desc).ransack(params[:q])
   end
 end

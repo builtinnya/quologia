@@ -5,6 +5,11 @@
         <%= link_to 'Quologia', root_path %>
         <button role="button">=</button>
       </li>
+      <li>
+        <%= search_form_for(@q, url: root_path, class: 'header-search-form') do |f| %>
+          <%= f.search_field :content_or_author_name_or_poster_name_cont, placeholder: '検索する' %>
+        <% end %>
+      </li>
     </ul>
     <ul>
       <% if logged_in? %>

@@ -42,6 +42,9 @@ gem 'mini_magick', '~> 3.7.0'
 # Use Kaminari for pagination
 gem 'kaminari', '~> 0.16.3'
 
+# Use Ransack for searching
+gem 'ransack', '~> 1.6.6'
+
 # For passing Rails data to js
 # gem 'gon', '~> 5.2.3'
 

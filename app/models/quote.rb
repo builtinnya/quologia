@@ -9,4 +9,10 @@ class Quote < ActiveRecord::Base
     return false unless user
     poster_id == user.id
   end
+
+  private
+
+  def self.ransackable_attributes(auth_object = nil)
+    super & %w(content author_name)
+  end
 end
