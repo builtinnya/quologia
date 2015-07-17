@@ -111,6 +111,9 @@ GEM
       rack (~> 1.0)
     omniauth-facebook (2.0.1)
       omniauth-oauth2 (~> 1.2)
+    omniauth-github (1.1.2)
+      omniauth (~> 1.0)
+      omniauth-oauth2 (~> 1.1)
     omniauth-oauth (1.1.0)
       oauth
       omniauth (~> 1.0)
@@ -201,6 +204,7 @@ DEPENDENCIES
   mini_magick (~> 3.7.0)
   omniauth (~> 1.2.2)
   omniauth-facebook (~> 2.0.1)
+  omniauth-github (~> 1.1.2)
   omniauth-twitter (~> 1.2.0)
   rails (= 4.2.3)
   ransack (~> 1.6.6)
