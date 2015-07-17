@@ -1,0 +1,5 @@
+.about {
+  .site-meta-table {
+    @include table($blank: true, $zebra: true);
+  }
+}

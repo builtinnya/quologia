@@ -11,7 +11,7 @@
         <blockquote>
           <%= quote.content %>
           <cite>
-            <%= link_to root_path(q: { author_name_cont: quote.author_name }) do %>
+            <%= link_to root_path(q: { author_name_eq: quote.author_name }) do %>
               <%= quote.author_name %>
             <% end %>
           </cite>

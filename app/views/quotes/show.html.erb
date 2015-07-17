@@ -26,10 +26,16 @@
       <tr>
         <td align="right">投稿者</td>
         <td>
-          <% if @quote.poster and @quote.poster.image_url %>
-            <%= image_tag @quote.poster.image_url, class: 'poster-image' %>
+          <% if @quote.poster %>
+            <% if @quote.poster.image_url %>
+              <%= image_tag @quote.poster.image_url, class: 'poster-image' %>
+            <% end %>
+            <%= link_to root_path(q: { poster_name_eq: @quote.poster.name }) do %>
+              <span class="poster-name-text"><%= @quote.poster.name %></span>
+            <% end %>
+          <% else %>
+            <span class="deleted-poster">退会済み</span>
           <% end %>
-          <span class="poster-name-text"><%= @quote.poster.name %></span>
         </td>
       </tr>
     </tbody>

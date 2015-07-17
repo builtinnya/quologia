@@ -46,6 +46,9 @@ gem 'kaminari', '~> 0.16.3'
 # Use Ransack for searching
 gem 'ransack', '~> 1.6.6'
 
+# For mail_to helper with encoding
+gem 'actionview-encoded_mail_to', '~> 1.0.6'
+
 # For passing Rails data to js
 # gem 'gon', '~> 5.2.3'
 

@@ -5,6 +5,6 @@ ja:
 
     attributes:
       quote:
-        author_name: 著者名
+        author_name: 発言者
         content: 内容
         author_image: 著者画像

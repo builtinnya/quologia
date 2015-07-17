@@ -1,6 +1,7 @@
 .wrapper {
   @include wrapper($fluid: true);
   max-width: $tablet;
+  margin-bottom: 25px;
 }
 
 .page-heading {

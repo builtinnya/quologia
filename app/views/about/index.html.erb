@@ -1,0 +1,54 @@
+<% title 'Quologia について' %>
+
+<header class="page-heading">
+  <h3>Quologia</h3>
+</header>
+
+<main class="about">
+  <table class="site-meta-table">
+    <tbody>
+      <tr>
+        <td align="right">サービス名</td>
+        <td>Quologia</td>
+      </tr>
+      <tr>
+        <td align="right">サービス名の読み</td>
+        <td>クオロギア</td>
+      </tr>
+      <tr>
+        <td align="right">動機</td>
+        <td><i class="fa fa-external-link-square"></i> <a href="http://rubyonrails.org/">Ruby on Rails</a> の学習</td>
+      </tr>
+      <tr>
+        <td align="right">機能</td>
+        <td>名言の閲覧，検索，および投稿</td>
+      </tr>
+      <tr>
+        <td align="right">開発・運営</td>
+        <td><i class="fa fa-external-link-square"></i> <a href="http://lambdar.me/">Naoto Yokoyama</a></td>
+      </tr>
+      <tr>
+        <td align="right">連絡先</td>
+        <td>
+          <i class="fa fa-twitter-square"></i> <a href="https://twitter.com/quologia">@quologia</a><br/>
+          <i class="fa fa-envelope"></i> <%= mail_to 'support@quologia.com', nil, encode: 'hex' %>
+        </td>
+      </tr>
+      <tr>
+        <td align="right">総ユーザ数</td>
+        <td><%= @num_users %></td>
+      </tr>
+      <tr>
+        <td align="right">総名言数</td>
+        <td><%= @num_quotes %></td>
+      </tr>
+      <tr>
+        <td align="right">利用規約</td>
+        <td>
+          <i class="fa fa-github-square"></i> <a href="https://github.com/builtinnya/quologia-policy/blob/master/terms-of-service.markdown">利用規約</a><br/>
+          <i class="fa fa-github-square"></i> <a href="https://github.com/builtinnya/quologia-policy/blob/master/privacy-policy.markdown">プライバシーポリシー</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</main>

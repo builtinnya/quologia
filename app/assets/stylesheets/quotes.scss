@@ -154,12 +154,12 @@
 
     .poster-name-text {
       display: inline-block;
-      max-width: 175px;
-      overflow: hidden;
-      text-overflow: ellipsis;
       vertical-align: top;
-      white-space: nowrap;
       padding-left: 5px;
+    }
+
+    .deleted-poster {
+      color: map-get($colors, red);
     }
   }
 }
