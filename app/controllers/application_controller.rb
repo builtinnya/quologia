@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotFound, ActionController::RoutingError, with: :error404
 
   # The number of quotes shown in index per page
-  PER = 5
+  PER = 10
 
   private
 
