@@ -12,11 +12,36 @@
 
     .quote-author-image {
       @include column(4);
+      position: relative;
       text-align: center;
 
       .user-author-image {
         width: 100px;
         height: 100px;
+      }
+
+      .after {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 100px;
+        height: 100px;
+        display: none;
+        color: #FFF;
+        vertical-align: middle;
+
+        span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &:hover .after {
+        display: block;
+        background: rgba(0, 0, 0, .6);
       }
     }
 
