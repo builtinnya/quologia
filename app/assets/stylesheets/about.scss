@@ -1,4 +1,9 @@
 .about {
+  .logo-container {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
   .site-meta-table {
     @include table($blank: true, $zebra: true);
   }
