@@ -4,6 +4,7 @@ class Quote < ActiveRecord::Base
 
   validates :author_name, length: { maximum: 100 }, presence: true
   validates :content, length: { maximum: 200 }, presence: true
+  validates :source, length: { maximum: 300 }
 
   def created_by?(user)
     return false unless user

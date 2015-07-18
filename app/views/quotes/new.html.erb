@@ -37,6 +37,10 @@
       </div>
     </div>
 
+    <div class="form-group quote-source">
+      <%= f.text_field :source, size: 30, class: ('error' if @quote.errors[:source].any?), placeholder: t('activerecord.attributes.quote.source') %>
+    </div>
+
     <div class="form-group quote-content">
       <%= f.text_area :content, rows: 4, cols: 30, class: ('error' if @quote.errors[:content].any?), placeholder: t('activerecord.attributes.quote.content') %>
     </div>

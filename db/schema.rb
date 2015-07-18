@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150713194140) do
+ActiveRecord::Schema.define(version: 20150718061518) do
 
   create_table "quotes", force: :cascade do |t|
     t.integer  "poster_id"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20150713194140) do
     t.string   "author_image"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "source"
   end
 
   add_index "quotes", ["poster_id"], name: "index_quotes_on_poster_id"

@@ -16,14 +16,6 @@
   <table class="quote-meta-table">
     <tbody>
       <tr>
-        <td align="right">投稿日時</td>
-        <td><%= @quote.created_at %>
-      </tr>
-      <tr>
-        <td align="right">最終更新日時</td>
-        <td><%= @quote.updated_at %></td>
-      </tr>
-      <tr>
         <td align="right">投稿者</td>
         <td>
           <% if @quote.poster %>
@@ -37,6 +29,18 @@
             <span class="deleted-poster">退会済み</span>
           <% end %>
         </td>
+      </tr>
+      <tr>
+        <td align="right">投稿日時</td>
+        <td><%= @quote.created_at %>
+      </tr>
+      <tr>
+        <td align="right">最終更新日時</td>
+        <td><%= @quote.updated_at %></td>
+      </tr>
+      <tr>
+        <td align="right">出典</td>
+        <td><%= @quote.source %></td>
       </tr>
     </tbody>
   </table>
