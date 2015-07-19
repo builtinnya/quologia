@@ -1,3 +1,13 @@
+GIT
+  remote: git@github.com:carrierwaveuploader/carrierwave.git
+  revision: 37cf31d34fa411db20e99cc654195020b06202c3
+  specs:
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -46,11 +56,6 @@ GEM
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
-    carrierwave (0.10.0)
-      activemodel (>= 3.2.0)
-      activesupport (>= 3.2.0)
-      json (>= 1.7)
-      mime-types (>= 1.16)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -221,7 +226,7 @@ DEPENDENCIES
   actionview-encoded_mail_to (~> 1.0.6)
   autoprefixer-rails
   byebug
-  carrierwave (~> 0.10.0)
+  carrierwave!
   coffee-rails (~> 4.1.0)
   fog-aws (~> 0.7.3)
   font-awesome-rails (~> 4.3.0.0)
