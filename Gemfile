@@ -37,9 +37,9 @@ gem 'omniauth-github', '~> 1.1.2'
 gem 'font-awesome-rails', '~> 4.3.0.0'
 
 # Use CarrierWave for file upload
-gem 'carrierwave', :git => 'git@github.com:carrierwaveuploader/carrierwave.git'
+gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 3.7.0'
-gem "fog-aws", '~> 0.7.3'
+gem 'fog', '~> 1.32.0'
 
 # Use Kaminari for pagination
 gem 'kaminari', '~> 0.16.3'

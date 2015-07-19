@@ -9,7 +9,6 @@ Rails.application.config.before_initialize do
     Rails.application.secrets.github_client_secret = ENV['GITHUB_CONSUMER_SECRET']
 
     CarrierWave.configure do |config|
-      config.fog_provider = 'fog/aws'
       config.fog_credentials = {
         provider:              'AWS',
         aws_access_key_id:     ENV['S3_KEY'],
