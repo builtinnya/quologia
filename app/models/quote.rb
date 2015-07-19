@@ -3,8 +3,8 @@ class Quote < ActiveRecord::Base
   belongs_to :poster, class_name: 'User', foreign_key: :poster_id
 
   validates :author_name, length: { maximum: 100 }, presence: true
-  validates :content, length: { maximum: 200 }, presence: true
-  validates :source, length: { maximum: 300 }
+  validates :content, length: { maximum: 250 }, presence: true
+  validates :source, length: { maximum: 250 }
 
   def created_by?(user)
     return false unless user

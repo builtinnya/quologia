@@ -14,27 +14,27 @@
 ActiveRecord::Schema.define(version: 20150718061518) do
 
   create_table "quotes", force: :cascade do |t|
-    t.integer  "poster_id"
-    t.string   "author_name",  null: false
-    t.string   "content",      null: false
-    t.string   "author_image"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.string   "source"
+    t.integer  "poster_id",    limit: 4
+    t.string   "author_name",  limit: 255, null: false
+    t.string   "content",      limit: 255, null: false
+    t.string   "author_image", limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "source",       limit: 255
   end
 
-  add_index "quotes", ["poster_id"], name: "index_quotes_on_poster_id"
+  add_index "quotes", ["poster_id"], name: "index_quotes_on_poster_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "provider",   null: false
-    t.string   "uid",        null: false
-    t.string   "nickname"
-    t.string   "name",       null: false
-    t.string   "image_url",  null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "provider",   limit: 255, null: false
+    t.string   "uid",        limit: 255, null: false
+    t.string   "nickname",   limit: 255
+    t.string   "name",       limit: 255, null: false
+    t.string   "image_url",  limit: 255, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
-  add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true
+  add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true, using: :btree
 
 end
