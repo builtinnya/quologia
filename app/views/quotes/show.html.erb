@@ -1,5 +1,7 @@
 <% title "\"#{@quote.content}\" - #{@quote.author_name}" %>
 
+<%= render "layouts/fb" %>
+
 <header class="page-heading">
   <h3>名言</h3>
 </header>
@@ -45,8 +47,16 @@
     </tbody>
   </table>
 
+
+  <div class="social-buttons">
+    <ul>
+      <li><%= render "layouts/tw_share" %></li>
+      <li><%= render "layouts/fb_share" %></li>
+    </ul>
+  </div>
+
   <div id="disqus_thread"></div>
-  <script type="text/javascript">
+  <script type="text/javascript" data-turbolink-track="false">
    /* * * CONFIGURATION VARIABLES * * */
    var disqus_shortname = 'quologia';
    var disqus_identifier = '/quotes/' + '<%= @quote.id %>';

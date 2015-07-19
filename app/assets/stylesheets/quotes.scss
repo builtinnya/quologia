@@ -165,4 +165,21 @@
       color: map-get($colors, red);
     }
   }
+
+  .social-buttons {
+    text-align: center;
+
+    >ul {
+      @include list($style: 'unstyled', $layout: 'horizontal');
+
+      >li {
+        vertical-align: top;
+      }
+    }
+
+    iframe {
+      padding: 0;
+      margin-bottom: 0;
+    }
+  }
 }

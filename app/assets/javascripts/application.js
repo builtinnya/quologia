@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+// Don't use turbolinks because it causes compatibility issues with social buttons and so on.
+// If you want to work hard and avoid these issues, see:
+//   https://github.com/reed/turbolinks-compatibility/
+// require turbolinks
 //= require kickstart_rails
 //= require_tree .
