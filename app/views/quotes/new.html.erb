@@ -22,7 +22,7 @@
         <% if @quote.author_image? %>
           <%= image_tag @quote.author_image.url, class: 'user-author-image' %>
         <% else %>
-          <%= fa_icon 'user', class: 'default-author-image' %>
+          <%= image_tag 'author-default.png', class: 'user-author-image' %>
         <% end %>
       </div>
       <div>
