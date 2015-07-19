@@ -3,8 +3,12 @@
 </header>
 
 <main class="quote-list">
-  <% @quotes.each do |quote| %>
-    <%= render partial: 'quotes/quote', locals: { quote: quote } %>
+  <% if @quotes.empty? %>
+    <%= render 'quotes/empty' %>
+  <% else %>
+    <% @quotes.each do |quote| %>
+      <%= render partial: 'quotes/quote', locals: { quote: quote } %>
+    <% end %>
   <% end %>
 
   <%= paginate @quotes, window: 2, outer_window: 3 %>
