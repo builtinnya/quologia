@@ -45,6 +45,10 @@
       <%= f.text_area :content, rows: 4, cols: 30, class: ('error' if @quote.errors[:content].any?), placeholder: t('activerecord.attributes.quote.content') %>
     </div>
 
+    <div class="agreement-notice">
+      投稿する前に，必ず<a href="https://github.com/builtinnya/quologia-policy/blob/master/terms-of-service.markdown">利用規約</a>をお読み下さい．
+    </div>
+
     <div class="submit">
       <%= f.submit '更新する', role: 'button', data: { disable_with: '更新中…' } %>
     </div>
