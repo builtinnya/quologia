@@ -1,3 +1,4 @@
 == Quologia
 
 {Quologia}[https://www.quologia.com/] is a web service for sharing quotes.
+Currently, Quologia supports Japanese only.
