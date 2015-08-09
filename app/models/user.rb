@@ -8,10 +8,16 @@ class User < ActiveRecord::Base
     name = auth_hash[:info][:name]
     image_url = auth_hash[:info][:image]
 
-    User.find_or_create_by(provider: provider, uid: uid) do |user|
+    user = User.find_or_create_by(provider: provider, uid: uid) do |user|
       user.nickname = nickname
       user.name = name
       user.image_url = image_url
     end
+
+    user.assign_attributes(nickname: nickname, name: name, image_url: image_url)
+
+    user.save! if user.changed?
+
+    user
   end
 end
