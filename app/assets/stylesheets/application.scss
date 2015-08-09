@@ -13,6 +13,11 @@
  * = require font-awesome
  */
 
+/*
+ * See: http://stackoverflow.com/questions/21084448/rails-production-server-google-font-not-loading
+ */
+@import url(//fonts.googleapis.com/css?family=Lato:300,400,700,400italic);
+
 @import 'kickstart_rails';
 @import 'common';
 @import 'header';
