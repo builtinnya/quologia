@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/jumph4x/canonical-rails.git
+  revision: a4f65e20dcad6577111373709b7ee47c0675b625
+  specs:
+    canonical-rails (0.0.9)
+      rails (>= 3.1, < 5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -191,6 +198,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    meta-tags (2.0.0)
+      actionpack (>= 3.0.0)
     mime-types (2.6.1)
     mini_magick (3.7.0)
       subexec (~> 0.2.1)
@@ -301,6 +310,7 @@ DEPENDENCIES
   actionview-encoded_mail_to (~> 1.0.6)
   autoprefixer-rails
   byebug
+  canonical-rails!
   carrierwave (~> 0.10.0)
   coffee-rails (~> 4.1.0)
   fog (~> 1.32.0)
@@ -309,6 +319,7 @@ DEPENDENCIES
   jquery-rails
   kaminari (~> 0.16.3)
   kickstart_rails (= 3.0.100)
+  meta-tags (~> 2.0.0)
   mini_magick (~> 3.7.0)
   mysql2
   omniauth (~> 1.2.2)

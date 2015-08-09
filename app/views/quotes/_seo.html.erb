@@ -1,0 +1,18 @@
+<!-- Open Graph -->
+<% set_meta_tags og: {
+  url: canonical_href,
+  title: quote.author_name,
+  description: quote.content,
+  site_name: 'Quologia',
+  image: quote.author_image.url,
+  app_id: Rails.application.secrets.facebook_api_id
+} %>
+
+<!-- Twitter Card -->
+<% set_meta_tags twitter: {
+  card: 'summary',
+  site: '@quologia',
+  title: quote.author_name,
+  description: quote.content,
+  image: quote.author_image.url
+} %>

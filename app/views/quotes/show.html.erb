@@ -1,6 +1,7 @@
 <% title "\"#{@quote.content}\" - #{@quote.author_name}" %>
 
-<%= render "layouts/fb" %>
+<% render partial: 'quotes/seo', locals: { quote: @quote } %>
+<%= render 'layouts/fb' %>
 
 <header class="page-heading">
   <h3>名言</h3>

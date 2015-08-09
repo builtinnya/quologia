@@ -50,6 +50,12 @@ gem 'ransack', '~> 1.6.6'
 # For mail_to helper with encoding
 gem 'actionview-encoded_mail_to', '~> 1.0.6'
 
+# To generate canonical URL
+gem 'canonical-rails', github: 'jumph4x/canonical-rails'
+
+# To make the site SEO friendly
+gem 'meta-tags', '~> 2.0.0'
+
 # For passing Rails data to js
 # gem 'gon', '~> 5.2.3'
 
