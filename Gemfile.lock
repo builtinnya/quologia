@@ -1,10 +1,3 @@
-GIT
-  remote: git://github.com/jumph4x/canonical-rails.git
-  revision: a4f65e20dcad6577111373709b7ee47c0675b625
-  specs:
-    canonical-rails (0.0.9)
-      rails (>= 3.1, < 5.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -54,6 +47,8 @@ GEM
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
+    canonical-rails (0.0.9)
+      rails (>= 3.1, < 5.0)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -310,7 +305,7 @@ DEPENDENCIES
   actionview-encoded_mail_to (~> 1.0.6)
   autoprefixer-rails
   byebug
-  canonical-rails!
+  canonical-rails (~> 0.0.9)
   carrierwave (~> 0.10.0)
   coffee-rails (~> 4.1.0)
   fog (~> 1.32.0)

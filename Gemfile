@@ -51,7 +51,7 @@ gem 'ransack', '~> 1.6.6'
 gem 'actionview-encoded_mail_to', '~> 1.0.6'
 
 # To generate canonical URL
-gem 'canonical-rails', github: 'jumph4x/canonical-rails'
+gem 'canonical-rails', '~> 0.0.9'
 
 # To make the site SEO friendly
 gem 'meta-tags', '~> 2.0.0'
